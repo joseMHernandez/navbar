@@ -1,0 +1,84 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    background-color: red;
+}
+
+.nav-links{
+    display: flex;
+  li{
+      list-style: none;
+      padding: 3rem;
+     
+
+  }
+
+  a{
+    font-size: 1.5rem;
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+      &:hover{
+          color: white;
+      }
+  }
+
+  
+}
+
+.logo{
+    padding: 3rem;
+    font-size: 3rem;
+}
+
+.burguer{
+    font-size: 3rem;
+    padding: 3rem;
+    display: none;
+    cursor: pointer;
+    
+}
+
+
+@media screen and (max-width: 500px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        height: 92vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        
+        flex-direction: column;
+        background-color: red;
+        transform: translateX(100%);
+       
+        transition: all .3s;
+    }
+  
+    li{
+        border-bottom: 1px solid black;
+        width: 100%;
+        text-align: center;
+        &:hover{
+            background-color: rgba(white, 0.3);
+        }
+    }
+
+.burguer{
+    display: block;
+
+}
+
+    .nav-active{
+        transform: translateX(0%);
+        
+    }
+}
